@@ -1,0 +1,1 @@
+{"last_found_secrets": [{"name": "Claude API Key - commit://staged/.env", "match": "2cbba0cca8942302131a85ddad23505fe800dcb594eb68569ae7c29a16812e24"}, {"name": "OpenAI Project API Key - commit://staged/.env", "match": "482e2545eadcf270cf64791b3fc847e2f60f7b9854672a57878c39c609f9bcc7"}]}
