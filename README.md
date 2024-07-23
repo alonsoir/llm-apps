@@ -7,6 +7,7 @@ Original source code uses qdrant for persistent vector db, i will include milvus
 
 - Utilizes OpenAI's GPT-4o model for generating responses
 - Implements persistent memory using Mem0 and Qdrant vector store
+- Implements persistent memory using Mem0 and Milvus vector store. In progress.
 - Allows users to view their conversation history
 - Provides a user-friendly interface with Streamlit
 
@@ -36,9 +37,11 @@ The app expects Qdrant to be running on localhost:6333. Adjust the configuration
         qdrant/qdrant
 ```
 3.1 Ensure Milvus is running:
-
+    The script test-milvus.py expects Milvus to be running on localhost:19530. Adjust the configuration in the code if your setup is
+different. It will download etcd as an embedded database.
 ```
-    mkdir milvus && cd milvus && curl -sfL https://raw.githubusercontent.com/milvus-io/milvus/master/scripts/standalone_embed.sh -o standalone_embed.sh
+    mkdir milvus && cd milvus && 
+    curl -sfL https://raw.githubusercontent.com/milvus-io/milvus/master/scripts/standalone_embed.sh -o standalone_embed.sh
     
     bash standalone_embed.sh start
     
@@ -61,6 +64,8 @@ The app expects Qdrant to be running on localhost:6333. Adjust the configuration
 
 ```
 4. Run the Streamlit App
+    The app needs openAI gpt-4 and Anthropic, so make sure you have api keys for both.
 ```bash
   poetry run streamlit run multi-llm.py
+  poetry run python multi-llm.py
 ```
