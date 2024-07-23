@@ -67,6 +67,10 @@ different. It will download etcd as an embedded database.
 ```
     wget https://github.com/milvus-io/milvus-docs/releases/download/v2.4.6-preview/milvus_docs_2.4.x_en.zip
     unzip -q milvus_docs_2.4.x_en.zip -d milvus_docs
+    
+    wget https://github.com/milvus-io/pymilvus-assets/releases/download/imagedata/reverse_image_search.zip
+    unzip -q -o reverse_image_search.zip
+
 ```
 
 4. Run the Streamlit App

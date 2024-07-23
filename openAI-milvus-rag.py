@@ -6,14 +6,14 @@ import json
 
 text_lines = []
 
-for file_path in glob("milvus_docs/en/faq/*.md", recursive=True):
+for file_path in glob("/Users/aironman/Downloads/en/faq/*.md", recursive=True):
     with open(file_path, "r") as file:
         file_text = file.read()
 
     text_lines += file_text.split("# ")
 
 # You will have to provide your own API key
-openai_client = OpenAI()
+openai_client = OpenAI(api_key="YOUR_API_KEY")
 
 def emb_text(text):
     return (
