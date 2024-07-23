@@ -63,9 +63,16 @@ different. It will download etcd as an embedded database.
     To change the default Milvus configuration, add your settings to the user.yaml file and then restart the service.
 
 ```
+3.2 Prepare the data for Milvus RAG sample (openAI-milvus-rag.py)
+```
+    wget https://github.com/milvus-io/milvus-docs/releases/download/v2.4.6-preview/milvus_docs_2.4.x_en.zip
+    unzip -q milvus_docs_2.4.x_en.zip -d milvus_docs
+```
+
 4. Run the Streamlit App
     The app needs openAI gpt-4 and Anthropic, so make sure you have api keys for both.
 ```bash
   poetry run streamlit run multi-llm.py
   poetry run python multi-llm.py
+  poetry run python openAI-milvus-rag.py
 ```
