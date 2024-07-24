@@ -15,6 +15,9 @@ mem0ai = "^0.0.9"
 litellm = "^1.41.25"
 pymilvus = "^2.4.4"
 scikit-learn = "^1.5.1"
+pinecone-client = "^5.0.0"
+transformers = "^4.43.1"
+psutil = "^6.0.0"
 
 
 [build-system]
