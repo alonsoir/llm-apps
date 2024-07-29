@@ -18,6 +18,8 @@ scikit-learn = "^1.5.1"
 pinecone-client = "^5.0.0"
 transformers = "^4.43.1"
 psutil = "^6.0.0"
+websockets = "^12.0"
+elevenlabs = "^1.6.0"
 
 
 [build-system]
